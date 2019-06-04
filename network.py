@@ -19,7 +19,7 @@ class Network:
         self.encoder = model.Encoder(n_inputs=n_features, n_hiddens=n_hiddens).to(self.gpu)
         self.decoder = model.AttentionDecoder(n_hiddens=n_hiddens, n_features=n_features).to(self.gpu)
 
-        self.model_fn = '../dat/SWaT-P{}'.format(pidx)
+        self.model_fn = 'checkpoints/SWaT-P{}'.format(pidx)
 
         self.encoder_optimizer = optim.Adam(self.encoder.parameters(), amsgrad=True)
         self.decoder_optimizer = optim.Adam(self.decoder.parameters(), amsgrad=True)
