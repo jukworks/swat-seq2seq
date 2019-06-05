@@ -12,7 +12,7 @@ This repo includes source codes and pre-trained models for the paper, "Anomaly D
 1. parser.py for normalization
 2. train.py for training models
 3. validate.py for calculating distances
-4. judge.py for rating suspicious region
+4. judge.py for rating suspicious region (S, section 2.5 in the paper)
 5. extract_anomaly_probs.py for extracting S (from 4) to a file
 6. measure_extractor.py for the result (dat/detection)
 
@@ -75,7 +75,7 @@ Most of the figures (graphs) are the screenshot of [Grafana](https://grafana.com
 
 ### extract_anomaly_probs.py
 
-This script extracts all rates for suspicious region ($S$ in the paper section 2.5).
+This script extracts all rates for suspicious region (S).
 
 ### first_look.py
 
@@ -85,7 +85,7 @@ This script prints the list of min, max, mean, and std-dev of all tags, all data
 
 **judge.py must run after validate.py ran.**
 
-This script calculates all rates for suspicious region ($S$) from distances in DB.
+This script calculates all rates for suspicious region (S) from distances in DB.
 
 ### measure_extractor.py
 
